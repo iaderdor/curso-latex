@@ -1,0 +1,39 @@
+%
+%	PREÁMBULO DEL DOCUMENTO
+%
+
+
+%
+%	Inicio del documento. Aquí declaramos la clase del archivo.
+%
+\documentclass[a4paper]{article}
+
+% Realizamos la carga de los paquetes, comandos y la definición del capítulo que hemos introducido en archivos a parte.
+
+\usepackage{sty/paquetes}
+\usepackage{sty/comandos}
+\usepackage{sty/titulo}
+
+
+% Cuerpo del documento
+
+\begin{document}
+
+% Crea el título
+\maketitle
+
+% Crea el índice de contenidos
+\tableofcontents
+
+
+% Comienza la introducción de las distintas secciones.
+\subfile{tex/sec1}
+\subfile{tex/sec2}
+\subfile{tex/sec3}
+
+
+% Comienza la introducción de la bibliografía
+\bibliographystyle{alpha}		% Selecciona el estilo de la bibliografía
+\bibliography{bibliografia}		% Sitúa aquí la bibliografía que se encuentre en el archivo bibliografía.bib.
+
+\end{document}

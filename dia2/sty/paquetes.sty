@@ -1,0 +1,35 @@
+\ProvidesPackage{paquetes}
+
+% Hace que podamos escribir directamente con tildes y acentos en el documento.
+\usepackage{fontspec}
+
+
+% Adecuación a la tipografía y silabación del español.
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+
+
+% Añade márgenes más pequeños al documento debido a que los que están por defecto son muy generosos.
+\usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm]{geometry}
+
+
+% Permite la carga de imágenes en formatos jpeg, png, svg y pdf.
+\usepackage{graphicx}
+
+
+% Añade el colocador H a los elementos deslizantes
+\usepackage{float}
+
+
+% Crea hipervínculos entre las referencias y etiquetas que se hayan escrito.
+\usepackage{hyperref}
+
+
+% Paquetes de utilidad matemática
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+% Permite divir un proyecto en un documento maestro y en sus hijos.
+\usepackage{subfiles}

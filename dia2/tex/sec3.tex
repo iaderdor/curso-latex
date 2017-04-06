@@ -1,0 +1,78 @@
+\makeatletter
+\def\input@path{{../}}
+\makeatother
+
+\documentclass[../preambulo.tex]{subfiles}
+
+
+\begin{document}
+
+
+\section{AMSLaTeX}
+
+% Este es un ejemplo de cómo consturir matrices.
+\[
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1 
+	\end{pmatrix}
+\]
+
+% Este ambiente del modo matemático nos permite escribir varias ecuaciones en el mismo abiente que ocupen varias líneas. No están alineadas.
+\begin{gather*}
+	a^2 = b^2 + c^2 \\
+	E = m c^2
+\end{gather*}
+
+% Este ambiente nos permite escribir ecuaciones en varias líneas alineadas. Siempre se alinean con respecto al carácter que vaya a continuación de &
+\begin{align*}
+	a^2 &= b^2 + c^2 \\
+	E &= m c^2	
+\end{align*}
+
+
+% Aligned nos permite alinear ecuaciones dentro del modo matemático, de modo que podemos realizar construcciones algo más complejas.
+\[
+	\sigma = 
+	\begin{aligned}
+			a^2 &= b^2 + c^2 \\
+			E &= m c^2
+	\end{aligned}
+\]
+
+% Este modo es similar a aligned, pero nos introduce una llave en el lado izquierdo de donde lo pongamos.
+\[
+	f(x) =%
+	\begin{cases}
+		0 \quad &\text{si} \quad x \leq 0 \\
+		1 \quad &\text{si} \quad x > 0
+	\end{cases}
+\]
+
+
+% Subequations es un ambiente que nos sirve para numerar las ecuaciones con el mismo número y una letra distinta ( 21a, 21b, 21c...)
+\begin{subequations}
+	\begin{equation}
+		a^2 = b^2 + c^2
+	\end{equation}
+	\begin{equation}
+		E = m c^2	
+	\end{equation}
+	\begin{equation}
+		\dif t = \xi m
+	\end{equation}
+\end{subequations}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
