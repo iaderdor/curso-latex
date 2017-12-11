@@ -1,6 +1,6 @@
 # Curso de Introducción a LaTeX
 
-Este repositorio contiene los ejemplos con los que se trataron en el Curso de Introducción a LaTeX impartido por la Biblioteca de Ciencias Físicas de la Universidad Complutense de Madrid y ASAAF-UCM los días 3 y 5 de abril de 2017.
+Este repositorio contiene los ejemplos con los que se trataron en el Curso de Introducción a LaTeX impartido por la Biblioteca de Ciencias Físicas de la Universidad Complutense de Madrid y ASAAF-UCM.
 
 Además, se incluyen también algunas de las instrucciones que se explicaron durante el curso.
 
@@ -9,7 +9,7 @@ Además, se incluyen también algunas de las instrucciones que se explicaron dur
 
 El objetivo del curso es enseñar a estudiantes de Físicas a usar LaTeX a un nivel básico. Se pretende que tras realizar el curso, el participante pueda comenzar a realizar proyectos mediante esta herramienta.
 
-Los contenidos del curso fueron:
+Los contenidos del curso son:
 
 
 ### Primera sesión
@@ -23,7 +23,7 @@ Los contenidos del curso fueron:
  * Carga de paquetes. Paquetes recomendados.
  * Elementos deslizantes. Declaración de figuras y parámetros. Colocadores. El paquete `float`. Inclusión de imágenes. Pie de foto.
  * Etiquetas y referencias. Situación de etiquetas. Recomendaciones a la hora de nombrar etiquetas.
- * Realización de tablas. Asistente para tablas de TeXmaker.
+ * Realización de tablas. Asistente para tablas de texstudio.
  * Ambiente matemático. Ecuaciones destacadas y en línea. Numeración de ecuaciones.
 
 ### Segunda sesión
@@ -33,11 +33,11 @@ Los contenidos del curso fueron:
  * Definición de comandos personalizados.
  * Organización del documento. Separación de paquetes, comandos y títulos del documento maestro. Paquete `subfiles`. Separación de los archivos `.tex` según la estructura del documento.
  * Paquetes de la AMSLaTeX: `amsmath`, `amssymbol`, `amsfonts`. Matrices. Paréntesis, corchetes, llaves y similar dentro de ecuaciones. Los ambientes `gather`, `align`, `aligned`, `cases` y `subequations`.
-
+ * Paquete `physics`.
 
 ## Instalación de LaTeX
 
-La instalación dependerá del sistema operativo que estemos usando. Existen varias distribuciones de LaTeX, así como editores, pero durante el curso usaremos `texlive` y `TeXmaker`. Esto es una cuestión completamente personal, sobre todo en lo referente a editores. Para el curso hicimos esta elección debido a que los tres son programas de software libre, que tienen una base de usuarios amplia (con lo cual es más sencillo encontrar la respuesta a las dudas que uno se encuentre buscando en internet) y que además están disponibles para los sistemas operativos mayoritarios.
+La instalación dependerá del sistema operativo que estemos usando. Existen varias distribuciones de LaTeX, así como editores, pero durante el curso usaremos `texlive` y `texstudio`. Esto es una cuestión completamente personal, sobre todo en lo referente a editores. Para el curso hicimos esta elección debido a que los tres son programas de software libre, que tienen una base de usuarios amplia (con lo cual es más sencillo encontrar la respuesta a las dudas que uno se encuentre buscando en internet) y que además están disponibles para los sistemas operativos mayoritarios.
 
 ### Instalación en Windows
 
@@ -45,7 +45,7 @@ Para instalar `texlive` en Windows deberemos descargarnos en primer lugar el [in
 
 Ten en cuenta que la instalación completa de `TeXLive` ocupa alrededor de 4600MB y que debe descargar todo de internet, con lo cual en función de la conexión que tengas puede tardar bastante tiempo.
 
-Finalmente, nos resta instalar TeXmaker. Procederemos descargándolo de [aquí](http://www.xm1math.net/texmaker/), seleccionando la versión adecuada para Windows. Finalmente, ejecutamos el instalador y seguimos los pasos que nos indique.
+Finalmente, nos resta instalar texstudio. Procederemos descargándolo de [aquí](https://www.texstudio.org/#download), seleccionando la versión adecuada para Windows. Finalmente, ejecutamos el instalador y seguimos los pasos que nos indique.
 
 ### Instalación en Linux
 
@@ -58,7 +58,7 @@ Para instalar `texlive` en linux es más sencillo usar directamente el gestor de
 
 Recuerda que para poder instalar estos paquetes se necesitan permisos de superusuario. Tras ejecutar el comando, el gestor de paquetes descargará e instalará `TeXlive`. Ten en cuenta que la instalación ocupa en torno a 4GB, con lo cual tardará un rato en instalarlo.
 
-Finalmente, para instalar `TeXmaker` es recomendable usar también el gestor de paquetes. En este caso, en todas las distribuciones el paquete se llama `texmaker`.
+Finalmente, para instalar `texstudio` es recomendable usar también el gestor de paquetes. En este caso, en todas las distribuciones el paquete se llama `texstudio`.
 
 Si usas una distribución que no esté nombrada aquí, es muy probable que no tenga que mencionarte como usar el gestor de paquetes. Simplemente, asegurate que el `texlive` que instales sea el que tiene todos los paquetes de LaTeX.
 
@@ -67,8 +67,22 @@ Si usas una distribución que no esté nombrada aquí, es muy probable que no te
 
 Para instalar `TeXlive` en OSX, primeramente debemos descargar la distribución específica para OSX, llamada MacTeX. El nombre es distinto, pero el software es el mismo. Puede descargarse también desde la [página web del TUG](https://tug.org/mactex/mactex-download.html). El archivo a descargar pesa 2.4GB, así que tardará un rato en descargarse. Finalizada la descarga, ejecuta el instalador y sigue las instrucciones.
 
-Finalmente, nos resta instalar TeXmaker. Procederemos descargándolo de [aquí](http://www.xm1math.net/texmaker/), seleccionando la versión adecuada para OS/X. Finalmente, ejecutamos el instalador y seguimos los pasos que nos indique.
+Finalmente, nos resta instalar texstudio. Procederemos descargándolo de [aquí](https://www.texstudio.org/#download), seleccionando la versión adecuada para OS/X. Finalmente, ejecutamos el instalador y seguimos los pasos que nos indique.
 
+
+## Comentarios acerca de la plantilla
+
+Una vez hecha la plantilla, para crear un nuevo capítulo, sección o similar, deberemos seguir el siguiente procedimiento:
+
+ 1. Localizar el archivo que vayamos a usar de modelo. En el caso de este curso, está en [dia2/tex/modelo.tex](dia2/tex/modelo.tex).
+ 2. Copiar el archivo y pegarlo en el mismo sitio, nombrándolo de algún modo que resulte fácil hacer referencia a él posteriormente. En este caso, `secXX.tex`, donde `XX` es un número.
+ 3. Añadir al documento maestro del proyecto el nuevo archivo, usando el comando:
+
+ ```
+ \subfile{tex/secXX}
+ ```
+
+Una vez hecho esto, ya podemos seguir trabajando con nuestro nuevo archivo.
 
 ## Bibliografía
 
